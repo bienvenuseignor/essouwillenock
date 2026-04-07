@@ -30,14 +30,17 @@ export default function About() {
                 alt="Willenock Essou - Coach et Formateur"
                 width={600}
                 height={600}
+                loading="lazy"
+                sizes="(max-width: 1024px) 100vw, 600px"
                 className="w-full h-auto object-cover"
+                quality={75}
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
                 <p className="font-display font-bold text-xl text-white">Willenock Essou</p>
-                <p className="text-white/80 mt-1">Coach & Formateur</p>
-                <div className="flex gap-3 justify-center mt-4" role="list" aria-label="Valeurs">
+                <p className="text-white mt-1">Coach & Formateur</p>
+                <div className="flex gap-3 justify-center mt-4">
                   {["Authenticité", "Stratégie", "Impact"].map((v) => (
-                    <span key={v} className="bg-white/20 text-white text-xs font-display font-medium px-3 py-1 rounded-full backdrop-blur-sm" role="listitem">{v}</span>
+                    <span key={v} className="bg-white/30 text-white text-xs font-display font-medium px-3 py-1 rounded-full backdrop-blur-sm">{v}</span>
                   ))}
                 </div>
               </div>
@@ -69,7 +72,7 @@ export default function About() {
                 Aujourd'hui, ma mission est simple : <span className="font-semibold text-primary">aider les freelances et auto-entrepreneurs africains à faire la même transformation.</span> Parce que le talent seul ne suffit plus — il faut être vu, entendu et choisi.
               </p>
 
-              <div className="grid grid-cols-3 gap-4 pt-6" role="list" aria-label="Statistiques">
+              <div className="grid grid-cols-3 gap-4 pt-6">
                 {[
                   { number: "4+", label: "Années d'expérience" },
                   { number: "500+", label: "Personnes formées" },
@@ -82,7 +85,6 @@ export default function About() {
                     viewport={{ once: true }}
                     transition={{ duration: t * 0.6, delay: t * (0.3 + i * 0.08), ease: [0.16, 1, 0.3, 1] }}
                     className="text-center"
-                    role="listitem"
                   >
                     <div className="font-display font-bold text-2xl text-primary">{stat.number}</div>
                     <div className="text-xs text-text-body dark:text-text-dark-muted mt-1">{stat.label}</div>

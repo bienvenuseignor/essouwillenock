@@ -11,3 +11,13 @@ export function useReducedMotion(): boolean {
   }, [])
   return reduced
 }
+
+// Détecte si l'utilisateur préfère des performances élevées
+export function useHighPerformanceMode(): boolean {
+  const [isHighPerf, setIsHighPerf] = useState(false)
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce), (update: slow)")
+    setIsHighPerf(mq.matches)
+  }, [])
+  return isHighPerf
+}

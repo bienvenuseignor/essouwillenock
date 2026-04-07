@@ -81,7 +81,7 @@ export default function Hero() {
             <motion.div
               className="relative"
               animate={{ y: [0, -8, 0] }}
-              transition={{ duration: t * 6, repeat: Infinity, ease: "easeInOut" }}
+              transition={{ duration: t * 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
             >
               <div className="w-80 h-80 sm:w-96 sm:h-96 lg:w-[480px] lg:h-[480px] rounded-3xl overflow-hidden shadow-2xl shadow-primary/25">
                 <Image
@@ -90,7 +90,9 @@ export default function Hero() {
                   width={480}
                   height={480}
                   priority
+                  sizes="(max-width: 640px) 320px, (max-width: 1024px) 384px, 480px"
                   className="w-full h-full object-cover"
+                  quality={80}
                 />
               </div>
 

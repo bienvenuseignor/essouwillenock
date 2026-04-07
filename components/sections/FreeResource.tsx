@@ -77,7 +77,7 @@ export default function FreeResource() {
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Ton adresse email"
                       required
-                      className="flex-1 px-4 py-3 border border-border dark:border-border-dark bg-white dark:bg-bg-dark-alt text-text-body dark:text-text-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent font-body placeholder:text-text-body/50 dark:placeholder:text-text-dark-muted"
+                      className="flex-1 px-4 py-3 border border-border dark:border-border-dark bg-white dark:bg-bg-dark-alt text-text-body dark:text-text-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent font-body placeholder:text-text-body/70 dark:placeholder:text-text-dark-muted"
                       aria-label="Adresse email"
                     />
                     <button

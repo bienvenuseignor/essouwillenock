@@ -26,6 +26,17 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body {
   font-family: var(--font-body);
   color: var(--color-text-body);
@@ -51,4 +62,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
   color: #FFFFFF;
+}
+
+/* Optimisations pour les animations */
+@supports (backdrop-filter: blur(1px)) {
+  [style*="backdrop-blur"] {
+    will-change: backdrop-filter;
+  }
+}
+
+@supports (transform: translate3d(0, 0, 0)) {
+  [style*="translate"], [style*="scale"], [style*="rotate"] {
+    transform: translate3d(0, 0, 0);
+  }
 }

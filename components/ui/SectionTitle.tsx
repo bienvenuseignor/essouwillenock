@@ -18,7 +18,7 @@ export default function SectionTitle({ label, title, subtitle, light = false }: 
       </h2>
       <div className="w-[60px] h-1 bg-primary mx-auto mb-6 rounded-full" />
       {subtitle && (
-        <p className={`text-lg ${light ? "text-white/80" : "text-text-body"}`}>
+        <p className={`text-lg ${light ? "text-white/95" : "text-text-body"}`}>
           {subtitle}
         </p>
       )}

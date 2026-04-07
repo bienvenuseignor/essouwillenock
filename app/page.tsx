@@ -1,14 +1,36 @@
+import dynamic from "next/dynamic"
 import Hero from "@/components/sections/Hero"
-import About from "@/components/sections/About"
-import PainPoints from "@/components/sections/PainPoints"
-import Method from "@/components/sections/Method"
-import WhatsAppCTA from "@/components/sections/WhatsAppCTA"
-import Services from "@/components/sections/Services"
-import Testimonials from "@/components/sections/Testimonials"
-import FreeResource from "@/components/sections/FreeResource"
-import FAQ from "@/components/sections/FAQ"
-import FinalCTA from "@/components/sections/FinalCTA"
-import WhatsAppButton from "@/components/ui/WhatsAppButton"
+
+const About = dynamic(() => import("@/components/sections/About"), {
+  loading: () => <div className="h-screen" />,
+})
+const PainPoints = dynamic(() => import("@/components/sections/PainPoints"), {
+  loading: () => <div className="h-screen" />,
+})
+const Method = dynamic(() => import("@/components/sections/Method"), {
+  loading: () => <div className="h-screen" />,
+})
+const WhatsAppCTA = dynamic(() => import("@/components/sections/WhatsAppCTA"), {
+  loading: () => <div className="h-96" />,
+})
+const Services = dynamic(() => import("@/components/sections/Services"), {
+  loading: () => <div className="h-screen" />,
+})
+const Testimonials = dynamic(() => import("@/components/sections/Testimonials"), {
+  loading: () => <div className="h-screen" />,
+})
+const FreeResource = dynamic(() => import("@/components/sections/FreeResource"), {
+  loading: () => <div className="h-screen" />,
+})
+const FAQ = dynamic(() => import("@/components/sections/FAQ"), {
+  loading: () => <div className="h-screen" />,
+})
+const FinalCTA = dynamic(() => import("@/components/sections/FinalCTA"), {
+  loading: () => <div className="h-96" />,
+})
+const WhatsAppButton = dynamic(() => import("@/components/ui/WhatsAppButton"), {
+  loading: () => null,
+})
 
 export default function Home() {
   return (

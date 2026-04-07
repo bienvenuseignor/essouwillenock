@@ -45,6 +45,7 @@ export default function Navbar() {
                 height={40}
                 priority
                 className="w-10 h-10 object-contain"
+                quality={85}
               />
               <span className="font-display font-bold text-xl text-text-heading dark:text-white">
                 Willenock<span className="text-primary">.</span>
